@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -15,18 +15,17 @@
   <body>
     <main class="scene">
       <div class="scene__bg" aria-hidden="true"></div>
+      <div class="scene__shade" aria-hidden="true"></div>
 
       <header class="header">
-        <h1 class="title">
-          <span class="title__light">PRUEBA</span>
-          <span class="title__accent">TU SUERTE</span>
-        </h1>
         <div class="logo">
-          <img src="source/logo.png" alt="Farkas Casino" />
-          <!--
-          <span class="logo__shine" aria-hidden="true"></span>
-          -->
+          <img src="source/lg.png" alt="Лого N" />
         </div>
+        <h1 class="title">
+          <span class="title__accent">Bonus</span>
+          <span class="title__value">£ 3,000</span>
+          <span class="title__sub">+100 free spins</span>
+        </h1>
       </header>
 
       <div class="character" aria-hidden="true">
@@ -34,46 +33,26 @@
       </div>
 
       <div class="wheel-area">
-        <div class="wheel-glow" aria-hidden="true">
-          <img src="source/wh_shine.png" alt="" />
-        </div>
-        <div class="wheel" id="wheel">
-          <img class="wheel__img" src="source/wheel_wt.png" alt="Колесо удачи" />
-          <div class="wheel__center" id="wheelCenter" role="button" aria-label="Запустить колесо" tabindex="0">
-            <img src="source/c_wh.png" alt="" />
+        <div class="wheel">
+          <div class="wheel__spin">
+            <img class="wheel__bg" id="wheelBg" src="source/wh_bg.png" alt="Колесо удачи" />
           </div>
-        </div>
-        <div class="wheel-pointer" aria-hidden="true">
-          <img src="source/pointer.png" alt="" />
-        </div>
-
-        <div class="coin coin--back coin--one">
-          <img src="source/c_back_1.png" alt="" />
-        </div>
-        <div class="coin coin--back coin--two">
-          <img src="source/c_back_2.png" alt="" />
-        </div>
-        <div class="coin coin--front coin--three">
-          <img src="source/c_front_1.png" alt="" />
+          <img class="wheel__border" src="source/wh_b.png" alt="" aria-hidden="true" />
+          <button class="wheel__center" id="wheelCenter" type="button" aria-label="Запустить колесо">
+            <img src="source/wh_c.png" alt="" />
+          </button>
         </div>
       </div>
+
+      <button class="spin-button" id="spinButton" type="button">Spin</button>
 
       <div class="modal" id="modal" aria-hidden="true">
         <div class="modal__backdrop"></div>
         <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-          <div class="modal__coin modal__coin--left">
-            <img src="source/c_back_1.png" alt="" />
-          </div>
-          <div class="modal__coin modal__coin--right">
-            <img src="source/c_back_2.png" alt="" />
-          </div>
-          <div class="modal__frame">
-            <img src="source/mod_w.png" alt="" />
-          </div>
           <div class="modal__body">
-            <h2 id="modalTitle">¡Ganaste!</h2>
-            <p>+500% hasta $5.000.000</p>
-            <button class="modal__button" type="button" id="modalButton">¡Toma tu bono!</button>
+            <h2 id="modalTitle">Поздравляем!</h2>
+            <p>Вы выиграли +100 FS и бонус £3,000.</p>
+            <button class="modal__button" type="button" id="modalButton">Забрать бонус</button>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 const wheelArea = document.querySelector(".wheel-area");
-const wheelImg = wheelArea.querySelector(".wheel__img");
+const wheelImg = document.getElementById("wheelBg");
 const center = document.getElementById("wheelCenter");
+const spinButton = document.getElementById("spinButton");
 const modal = document.getElementById("modal");
 const modalButton = document.getElementById("modalButton");
 
@@ -53,6 +54,7 @@ const startSpin = () => {
 };
 
 center.addEventListener("click", startSpin);
+spinButton.addEventListener("click", startSpin);
 center.addEventListener("keydown", (event) => {
   if (event.key === "Enter" || event.key === " ") {
     event.preventDefault();
