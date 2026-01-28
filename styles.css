@@ -183,15 +183,17 @@ button {
 }
 
 .spin-button {
-  position: relative;
-  margin-top: 2.6vh;
-  width: min(78vw, 320px);
-  padding: 0.9rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 7vh;
+  transform: translateX(-50%);
+  width: min(74vw, 300px);
+  padding: 0.95rem 1rem;
   background: var(--red);
   color: #fff;
   border: none;
-  border-radius: 14px;
-  font-size: clamp(1.1rem, 5vw, 1.5rem);
+  border-radius: 12px;
+  font-size: clamp(1.1rem, 5vw, 1.6rem);
   font-weight: 800;
   text-transform: uppercase;
   box-shadow: 0 10px 20px var(--shadow);
