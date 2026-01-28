@@ -51,8 +51,8 @@ button {
 
 .header {
   position: relative;
-  width: min(92vw, 420px);
-  margin-top: 4vh;
+  /* width: min(92vw, 420px); */
+  margin-top: 7vh;
   display: flex;
   align-items: flex-start;
   gap: 0.8rem;
@@ -112,10 +112,12 @@ button {
 }
 
 .wheel-area {
-  position: relative;
-  width: min(78vw, 340px);
-  margin-top: 5vh;
-  z-index: 4;
+    position: relative;
+    width: min(78vw, 340px);
+    margin-top: 5vh;
+    z-index: 4;
+    right: -30vw;
+    scale: 150%;
 }
 
 .wheel {
