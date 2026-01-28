@@ -291,12 +291,16 @@ button {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .wheel-area {
     width: min(84vw, 300px);
   }
 
-  .character {
-    width: min(58vw, 210px);
+  .character img {
+    width: 130%;
   }
+}
+
+
+
 }
